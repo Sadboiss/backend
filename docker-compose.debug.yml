@@ -1,10 +1,11 @@
 version: '3.4'
 
 services:
-  webapi:
-    image: webapi
+  sadbois-api:
+    image: sadbois-api
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ~/.vsdbg:/remote_debugger:rw
+    environment: 
+      - DB_PW
+      - DB_UserId

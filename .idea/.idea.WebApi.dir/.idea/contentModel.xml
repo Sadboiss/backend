@@ -3,6 +3,8 @@
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".dockerignore" t="Include" />
+      <e p=".env" t="Include" />
+      <e p=":USERPROFILE.aspnethttpssadboisAPI.pfx" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />

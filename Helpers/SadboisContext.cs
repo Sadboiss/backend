@@ -19,7 +19,7 @@ namespace WebApi.Helpers
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=localhost;database=mtlstore;user=tony;pwd=habibiana;");
+                optionsBuilder.UseMySql("server=db;database=sadbois;user=tony;pwd=123;");
             }
         }
         

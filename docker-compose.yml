@@ -1,8 +1,20 @@
 version: '3.4'
 
 services:
-  webapi:
-    image: webapi
+  sadbois-api:
+    image: sadbois-api
     build:
       context: .
       dockerfile: Dockerfile
+    environment: 
+      - DB_PW
+      - DB_UserId
+  db: 
+    image: mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: "123"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      SA_PASSWORD: "${DB_PW}"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1443:3306"

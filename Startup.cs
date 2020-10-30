@@ -25,9 +25,13 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var config = new StringBuilder(Configuration["ConnectionStrings:MyConnection"]);
+            string conn = config.Replace("ENVID", Configuration["DB_UserId"])
+                                .Replace("ENVPW", Configuration["DB_PW"])
+                                .ToString();
             // in memory database used for simplicity, change to a real db for production applications
             services.AddDbContext<SadboisContext>(options => {
-                options.UseMySql(Configuration.GetConnectionString("MyConnection"));
+                options.UseMySql(conn/*Configuration.GetConnectionString("MyConnection")*/);
             });
             services.AddCors();
             services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
