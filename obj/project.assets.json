@@ -8031,19 +8031,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/tony/.nuget/packages/": {}
+    "C:\\Users\\tonyo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tony/Desktop/sadbois_backend/WebApi.csproj",
+      "projectUniqueName": "D:\\sadbois_backend\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/Users/tony/Desktop/sadbois_backend/WebApi.csproj",
-      "packagesPath": "/Users/tony/.nuget/packages/",
-      "outputPath": "/Users/tony/Desktop/sadbois_backend/obj/",
+      "projectPath": "D:\\sadbois_backend\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\tonyo\\.nuget\\packages\\",
+      "outputPath": "D:\\sadbois_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/tony/.config/NuGet/NuGet.Config"
+        "C:\\Users\\tonyo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8118,7 +8118,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
