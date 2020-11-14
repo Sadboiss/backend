@@ -17,7 +17,7 @@ namespace WebApi.Services
     {
         AuthenticateResponse Authenticate(AuthenticateRequest model, string ipAddress);
         AuthenticateResponse RefreshToken(string token, string ipAddress);
-        bool CreateAccount(AccountCreationRequest model);
+        AccountCreationResponse CreateAccount(AccountCreationRequest model);
         bool RevokeToken(string token, string ipAddress);
         IEnumerable<User> GetAll();
         User GetById(int id);
@@ -55,11 +55,11 @@ namespace WebApi.Services
             return new AuthenticateResponse(user, jwtToken, refreshToken.Token);
         }
         
-        public bool CreateAccount(AccountCreationRequest model)
+        public AccountCreationResponse CreateAccount(AccountCreationRequest model)
         {
             var emailExists = _context.Users.FirstOrDefault(u => u.Email.Equals(model.Email));
             if (emailExists != null)
-                return false;
+                return null;
 
             var user = new User
             {
@@ -81,7 +81,7 @@ namespace WebApi.Services
             _context.Inventories.Add(inventory);
             _context.SaveChanges();
 
-            return true;
+            return new AccountCreationResponse(user);
         }
 
         private Address ValidateAddress(AccountCreationRequest model)

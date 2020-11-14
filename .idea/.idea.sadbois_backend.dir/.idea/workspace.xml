@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbf34601-a200-40c8-b587-9638459cae33" name="Default Changelist" comment="" />
+    <list default="true" id="cbf34601-a200-40c8-b587-9638459cae33" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Models/AccountCreationResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/AuthenticateResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AuthenticateResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="sadbois_backend" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/AuthenticateResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/AccountCreationRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/AccountCreationResponse.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -16,25 +58,31 @@
         <option value="$PROJECT_DIR$/Dockerfile.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/Models/AccountCreationResponse.cs" />
+        <option value="$PROJECT_DIR$/Services/UserService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/UsersController.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1iSi81kV9Eox6EOFSzdyfjnOfAQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991798" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.300164" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -44,9 +92,9 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
@@ -61,12 +109,113 @@
       <option name="presentableId" value="Default" />
       <updated>1601907230898</updated>
       <workItem from="1601907232185" duration="4345000" />
+      <workItem from="1605378318567" duration="1538000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605378507529">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605378507529" />
+    <state width="1860" height="371" key="GridCell.Tab.0.bottom" timestamp="1605379860233">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
+    <state width="1860" height="371" key="GridCell.Tab.0.center" timestamp="1605379860232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860232" />
+    <state width="1860" height="371" key="GridCell.Tab.0.left" timestamp="1605379860231">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860231" />
+    <state width="1860" height="371" key="GridCell.Tab.0.right" timestamp="1605379860233">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
+    <state width="1860" height="371" key="GridCell.Tab.1.bottom" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.1.center" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.1.left" timestamp="1605379860233">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
+    <state width="1860" height="371" key="GridCell.Tab.1.right" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.2.bottom" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.2.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.2.center" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.2.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.2.left" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.2.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.2.right" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.2.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.3.bottom" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.3.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.3.center" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.3.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.3.left" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.3.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.3.right" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.3.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.4.bottom" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.4.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.4.center" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.4.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.4.left" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.4.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1860" height="371" key="GridCell.Tab.4.right" timestamp="1605379860234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="371" key="GridCell.Tab.4.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+  </component>
 </project>

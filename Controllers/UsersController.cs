@@ -53,11 +53,11 @@ namespace WebApi.Controllers
         public IActionResult AccountCreation([FromBody] AccountCreationRequest model)
         {
             var response = _userService.CreateAccount(model);
-            
-            if (!response)
-                return NotFound("Error in creating user. Email probably already exists.");
+
+            if (response == null) 
+                return BadRequest(new { message = "Email already exists" });
                 
-            return Ok("Account successfully created");
+            return Ok(response);
         }
 
         [HttpPost("revoke-token")]
