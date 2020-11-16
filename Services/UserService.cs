@@ -71,14 +71,14 @@ namespace WebApi.Services
                 Address = ValidateAddress(model)
             };
 
-            var inventory = new Inventory
+            var inventory = new Cart
             {
                 User = user,
-                InventoryItems = new List<InventoryItem>()
+                CartItems = new List<CartItem>()
             };
 
             _context.Users.Add(user);
-            _context.Inventories.Add(inventory);
+            _context.Carts.Add(inventory);
             _context.SaveChanges();
 
             return new AccountCreationResponse(user);

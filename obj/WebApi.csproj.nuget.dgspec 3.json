@@ -14,7 +14,7 @@
         "outputPath": "/Users/tony/Desktop/sadbois_backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/tony/.nuget/NuGet/NuGet.Config"
+          "/Users/tony/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

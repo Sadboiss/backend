@@ -4,11 +4,11 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".dockerignore" t="Include" />
       <e p=".env" t="Include" />
-      <e p=":USERPROFILE.aspnethttpssadboisAPI.pfx" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
+        <e p="CartController.cs" t="Include" />
         <e p="UsersController.cs" t="Include" />
       </e>
       <e p="docker-compose.debug.yml" t="Include" />
@@ -16,9 +16,9 @@
       <e p="Dockerfile" t="Include" />
       <e p="Entities" t="Include">
         <e p="Address.cs" t="Include" />
+        <e p="Cart.cs" t="Include" />
+        <e p="CartItem.cs" t="Include" />
         <e p="Entity.cs" t="Include" />
-        <e p="Inventory.cs" t="Include" />
-        <e p="InventoryItem.cs" t="Include" />
         <e p="Item.cs" t="Include" />
         <e p="Order.cs" t="Include" />
         <e p="RefreshToken.cs" t="Include" />
@@ -37,8 +37,11 @@
       </e>
       <e p="Models" t="Include">
         <e p="AccountCreationRequest.cs" t="Include" />
+        <e p="AccountCreationResponse.cs" t="Include" />
         <e p="AuthenticateRequest.cs" t="Include" />
         <e p="AuthenticateResponse.cs" t="Include" />
+        <e p="CartItemRequest.cs" t="Include" />
+        <e p="CartItemResponse.cs" t="Include" />
         <e p="RevokeTokenRequest.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
@@ -52,6 +55,7 @@
       <e p="Program.cs" t="Include" />
       <e p="README.md" t="Include" />
       <e p="Services" t="Include">
+        <e p="CartService.cs" t="Include" />
         <e p="UserService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />

@@ -1,14 +1,17 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApi.Entities
 {
-    public class Inventory : Entity
+    public class Cart : Entity
     {
-        public virtual List<InventoryItem> InventoryItems { get; set; }
         
         [ForeignKey("UserId")]
         public int UserId { get; set; }
+        public virtual List<CartItem> CartItems { get; set; }
+        
+        public DateTime DateCreated;
         public virtual User User { get; set; }
     }
 }
