@@ -6,14 +6,12 @@ namespace WebApi.Entities
 {
     public class CartItem : Entity
     {
-        [ForeignKey("ItemId")]
-        public int ItemId { get; set; }
-        [ForeignKey("CartId")]
-        public int CartId { get; set; }
+        public int ProductId { get; set; }
+        public int ShoppingCartId { get; set; }
         public int Quantity { get; set; }
-        public DateTime DateCreated { get; set; }
-        public virtual Item Item { get; set; }
-        public virtual Cart Cart { get; set; }
-   
+        
+        [ForeignKey("ProductId")]
+        public virtual Product Product { get; set; }
+        public virtual ShoppingCart ShoppingCart { get; set; }
     }
 }

@@ -16,8 +16,8 @@ namespace WebApi.Entities
         public int UserId { get; set; }
         public virtual User User { get; set; }
         
-        [ForeignKey("ItemId")]
-        public int ItemId { get; set; }
-        public virtual Item Item { get; set; }
+        [ForeignKey("ProductId")]
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

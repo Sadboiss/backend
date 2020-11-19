@@ -7,8 +7,8 @@ namespace WebApi.Helpers
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Item> Items { get; set; }
-        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
@@ -30,26 +30,21 @@ namespace WebApi.Helpers
                 .WithMany()
                 .HasForeignKey(u => u.AddressId);
 
-            modelBuilder.Entity<Cart>()
+            modelBuilder.Entity<ShoppingCart>()
                 .HasMany(i => i.CartItems)
-                .WithOne(i => i.Cart);
+                .WithOne(i => i.ShoppingCart)
+                .HasForeignKey(i => i.ShoppingCartId)
+                .IsRequired();
 
-            modelBuilder.Entity<Cart>()
+            modelBuilder.Entity<ShoppingCart>()
                 .HasOne(i => i.User)
                 .WithMany()
                 .HasForeignKey(i => i.UserId)
                 .IsRequired();
 
             modelBuilder.Entity<CartItem>()
-                .HasOne(ii => ii.Cart)
+                .HasOne(ci => ci.Product)
                 .WithMany()
-                .HasForeignKey(ii => ii.CartId)
-                .IsRequired();
-
-            modelBuilder.Entity<CartItem>()
-                .HasOne(ii => ii.Item)
-                .WithMany()
-                .HasForeignKey(ii => ii.ItemId)
                 .IsRequired();
         }
     }

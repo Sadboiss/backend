@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Entities;
 using System;
+using AutoMapper;
+using WebApi.MappingProfiles;
 
 namespace WebApi
 {
@@ -33,8 +35,11 @@ namespace WebApi
             services.AddDbContext<SadboisContext>(options => {
                 options.UseMySql(conn/*Configuration.GetConnectionString("MyConnection")*/);
             });
+            services.AddAutoMapper(typeof(MappingProfile));
             services.AddCors();
-            services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
+            /*services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);*/
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
@@ -65,6 +70,7 @@ namespace WebApi
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IShoppingCartService, ShoppingCartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

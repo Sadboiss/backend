@@ -11,8 +11,8 @@ namespace WebApi.Entities
         public int OrderId { get; set; }
         public virtual Order Order { get; set; }
         
-        [ForeignKey("ItemId")]
-        public int ItemId { get; set; }
-        public virtual Item Item { get; set; }
+        [ForeignKey("ProductId")]
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

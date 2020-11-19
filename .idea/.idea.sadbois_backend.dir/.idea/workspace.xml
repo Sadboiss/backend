@@ -20,19 +20,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbf34601-a200-40c8-b587-9638459cae33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/AccountCreationResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/AddressDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/CartItemDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/ProductDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/RefreshTokenDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/ShoppingCartDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/DTOs/UserDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ProductsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/ShoppingCartsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MappingProfiles/MappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/ShoppingCartService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.sadbois_backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/AuthenticateResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/AuthenticateResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/CartController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Cart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/ShoppingCart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/CartItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/CartItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Transaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Transaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helpers/SadboisContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helpers/SadboisContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20201005085013_init_tables.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20201005085013_init_tables.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/SadboisContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/SadboisContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CartItemRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CartItemRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/CartItemResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/CartItemResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/CartService.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/WebApi.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/WebApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/WebApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/WebApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,13 +74,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CartItemResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/SadboisContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/CartItemRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Models/RevokeTokenRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/AuthenticateResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/AccountCreationRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/ShoppingCartService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/441B1F1D-0007-4533-BF4B-294EFD4F790B/24/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MappingProfiles/MappingProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/CartItemDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/RefreshTokenDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/ProductDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/ShoppingCartDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/AddressDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/DTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/AccountCreationResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Address.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Transaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/ProductsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/ShoppingCartsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Product.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/CartItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/RefreshToken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/ShoppingCart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entities/Order.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helpers/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,8 +113,34 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/Models/AccountCreationResponse.cs" />
-        <option value="$PROJECT_DIR$/Services/UserService.cs" />
         <option value="$PROJECT_DIR$/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/Entities/Order.cs" />
+        <option value="$PROJECT_DIR$/Models/CartItemRequest.cs" />
+        <option value="$PROJECT_DIR$/Models/CartItemResponse.cs" />
+        <option value="$PROJECT_DIR$/Entities/Transaction.cs" />
+        <option value="$PROJECT_DIR$/Services/UserService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/UserDto.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/AddressDto.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/RefreshTokenDto.cs" />
+        <option value="$PROJECT_DIR$/Services/CartService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/CartController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ShoppingCartController.cs" />
+        <option value="$PROJECT_DIR$/Mappers/MappingProfile.cs" />
+        <option value="$PROJECT_DIR$/Migrations/20201117155909_InitTables.cs" />
+        <option value="$PROJECT_DIR$/Startup.cs" />
+        <option value="$PROJECT_DIR$/MappingProfiles/MappingProfile.cs" />
+        <option value="$PROJECT_DIR$/Helpers/SadboisContext.cs" />
+        <option value="$PROJECT_DIR$/Entities/Product.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/CartItemDto.cs" />
+        <option value="$PROJECT_DIR$/Entities/CartItem.cs" />
+        <option value="$PROJECT_DIR$/Entities/ShoppingCart.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/ShoppingCartDto.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
+        <option value="$PROJECT_DIR$/Controllers/DTOs/ProductDto.cs" />
+        <option value="$PROJECT_DIR$/Entities/Entity.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ProductsController.cs" />
+        <option value="$PROJECT_DIR$/Services/ShoppingCartService.cs" />
+        <option value="$PROJECT_DIR$/Controllers/ShoppingCartsController.cs" />
       </list>
     </option>
   </component>
@@ -71,12 +151,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991798" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.300164" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
@@ -110,6 +192,12 @@
       <updated>1601907230898</updated>
       <workItem from="1601907232185" duration="4345000" />
       <workItem from="1605378318567" duration="1538000" />
+      <workItem from="1605379956607" duration="115000" />
+      <workItem from="1605397753801" duration="1167000" />
+      <workItem from="1605530663839" duration="8983000" />
+      <workItem from="1605627852388" duration="7288000" />
+      <workItem from="1605645699431" duration="8924000" />
+      <workItem from="1605696714860" duration="23258000" />
     </task>
     <servers />
   </component>
@@ -128,6 +216,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -137,85 +226,122 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605378507529" />
-    <state width="1860" height="371" key="GridCell.Tab.0.bottom" timestamp="1605379860233">
+    <state width="499" height="464" key="DebuggerActiveHint" timestamp="1605743762451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
-    <state width="1860" height="371" key="GridCell.Tab.0.center" timestamp="1605379860232">
+    <state width="499" height="464" key="DebuggerActiveHint/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605743762451" />
+    <state width="1877" height="304" key="GridCell.Tab.0.bottom" timestamp="1605806374680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860232" />
-    <state width="1860" height="371" key="GridCell.Tab.0.left" timestamp="1605379860231">
+    <state width="1877" height="304" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374680" />
+    <state width="1877" height="304" key="GridCell.Tab.0.center" timestamp="1605806374680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860231" />
-    <state width="1860" height="371" key="GridCell.Tab.0.right" timestamp="1605379860233">
+    <state width="1877" height="304" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374680" />
+    <state width="1877" height="304" key="GridCell.Tab.0.left" timestamp="1605806374680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
-    <state width="1860" height="371" key="GridCell.Tab.1.bottom" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374680" />
+    <state width="1877" height="304" key="GridCell.Tab.0.right" timestamp="1605806374680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.1.center" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374680" />
+    <state width="1877" height="304" key="GridCell.Tab.1.bottom" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.1.left" timestamp="1605379860233">
+    <state width="1877" height="304" key="GridCell.Tab.1.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.1.center" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860233" />
-    <state width="1860" height="371" key="GridCell.Tab.1.right" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.1.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.1.left" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.2.bottom" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.1.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.1.right" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.2.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.2.center" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.1.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.2.bottom" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.2.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.2.left" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.2.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.2.center" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.2.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.2.right" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.2.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.2.left" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.2.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.3.bottom" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.2.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.2.right" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.3.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.3.center" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.2.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.3.bottom" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.3.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.3.left" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.3.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.3.center" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.3.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.3.right" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.3.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.3.left" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.3.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.4.bottom" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.3.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.3.right" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.4.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.4.center" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.3.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.4.bottom" timestamp="1605806374524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.4.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.4.left" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.4.bottom/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374524" />
+    <state width="1877" height="304" key="GridCell.Tab.4.center" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.4.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
-    <state width="1860" height="371" key="GridCell.Tab.4.right" timestamp="1605379860234">
+    <state width="1877" height="304" key="GridCell.Tab.4.center/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.4.left" timestamp="1605806374523">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="371" key="GridCell.Tab.4.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605379860234" />
+    <state width="1877" height="304" key="GridCell.Tab.4.left/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state width="1877" height="304" key="GridCell.Tab.4.right" timestamp="1605806374523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="304" key="GridCell.Tab.4.right/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605806374523" />
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1605532747326">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="221" key="RiderGenerateDialog/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605532747326" />
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog" timestamp="1605535721283">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="VCS.FileHistoryDialog/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605535721283" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1605665774356">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605665774356" />
+    <state x="430" y="301" width="1373" height="652" key="dock-window-1" timestamp="1605640850678">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="430" y="301" width="1373" height="652" key="dock-window-1/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605640850678" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605629316056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605629316056" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1605796559382">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.1920.1040@0.0.1920.1040" timestamp="1605796559382" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="WebApi.Entities.ShoppingCart" fieldName="User" />
+        <PinnedItemInfo typeName="WebApi.Controllers.DTOs.ShoppingCartDto" fieldName="User" />
+        <PinnedItemInfo typeName="WebApi.Services.ShoppingCartService" fieldName="_context" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

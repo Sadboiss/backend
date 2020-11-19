@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/tony/Desktop/sadbois_backend/WebApi.csproj",
+    "projectUniqueName": "D:\\sadbois_backend\\WebApi.csproj",
     "projectName": "WebApi",
-    "projectPath": "/Users/tony/Desktop/sadbois_backend/WebApi.csproj",
-    "outputPath": "/Users/tony/Desktop/sadbois_backend/obj/",
+    "projectPath": "D:\\sadbois_backend\\WebApi.csproj",
+    "outputPath": "D:\\sadbois_backend\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -26,9 +26,17 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[8.1.0, )"
+        },
         "Microsoft.AspNetCore.Authentication.JwtBearer": {
           "target": "Package",
           "version": "[3.1.4, )"
+        },
+        "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+          "target": "Package",
+          "version": "[3.1.10, )"
         },
         "Microsoft.EntityFrameworkCore.Design": {
           "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -79,7 +87,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
     }
   }
 }
