@@ -12,7 +12,7 @@ namespace WebApi.Services
     public interface IShoppingCartService
     {
         IEnumerable<ShoppingCart> GetCart(int id);
-        int Add(CartItemDto model);
+        int Add(int userId, int productId);
         int Delete(int id);
         int Clear(int userId);
     }
@@ -33,16 +33,23 @@ namespace WebApi.Services
                 .ThenInclude(x => x.Product);
         }
 
-        public int Add(CartItemDto model)
+        public int Add(int cartId, int productId)
         {
-            var item = new CartItem
+            var cartItems = _context.CartItems.Where(x => x.ShoppingCartId == cartId);
+            if (cartItems.Any(x => x.ProductId == productId))
             {
-                
-                ShoppingCartId = model.ShoppingCartId,
-                ProductId = model.ProductId,
-                Quantity = model.Quantity
-            };
-            _context.CartItems.Add(item);
+                cartItems.First(x => x.ProductId == productId).Quantity++;
+            }
+            else
+            {
+                var item = new CartItem
+                {
+                    ShoppingCartId = cartId,
+                    ProductId = productId,
+                    Quantity = 1,
+                };
+                _context.CartItems.Add(item);
+            }
             return _context.SaveChanges();
         }
 

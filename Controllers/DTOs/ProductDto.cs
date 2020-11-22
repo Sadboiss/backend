@@ -1,6 +1,8 @@
-﻿namespace WebApi.Controllers.DTOs
+﻿using WebApi.Entities;
+
+namespace WebApi.Controllers.DTOs
 {
-    public class ProductDto
+    public class ProductDto : Entity
     {
         public string Name { get; set; }
         public string Description { get; set; }

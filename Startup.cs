@@ -8,10 +8,14 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Entities;
+using System.Net.WebSockets;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using WebApi.MappingProfiles;
+using WebApi.Middleware;
 
 namespace WebApi
 {
@@ -37,6 +41,7 @@ namespace WebApi
             });
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddCors();
+            
             /*services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);*/
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
@@ -45,6 +50,9 @@ namespace WebApi
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
+            // configure web socket manager
+            services.AddWebSocketManager();
+            
             // configure jwt authentication
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
@@ -83,6 +91,13 @@ namespace WebApi
             //context.SaveChanges();
 
             app.UseRouting();
+            app.UseWebSockets();
+            app.UseWebSocketServer();
+            app.Run(async contxt =>
+            {
+                Console.WriteLine("Hello from the 3rd request delegate");
+                await contxt.Response.WriteAsync("Hello from the 3rd request delegate");
+            });
 
             // global cors policy
             app.UseCors(x => x
@@ -96,5 +111,7 @@ namespace WebApi
 
             app.UseEndpoints(x => x.MapControllers());
         }
+
+        
     }
 }

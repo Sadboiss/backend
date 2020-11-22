@@ -40,10 +40,10 @@ namespace WebApi.Controllers
             return Ok(_shoppingCartService.Clear(userId));
         }
         
-        [HttpPost("add")]
-        public IActionResult Add([FromBody] CartItemDto model)
+        [HttpPost("{cartId}/add/{productId}")]
+        public IActionResult Add(int cartId, int productId)
         {
-            return Ok(_shoppingCartService.Add(model));
+            return Ok(_shoppingCartService.Add(cartId, productId));
         }
         
         [HttpDelete("{id}")]

@@ -44,6 +44,11 @@
       <e p="MappingProfiles" t="Include">
         <e p="MappingProfile.cs" t="Include" />
       </e>
+      <e p="Middleware" t="Include">
+        <e p="WebSocketServerConnectionManager.cs" t="Include" />
+        <e p="WebSocketServerMiddleware.cs" t="Include" />
+        <e p="WebSocketServerMiddlewareExtensions.cs" t="Include" />
+      </e>
       <e p="Migrations" t="Include">
         <e p="20201119165336_InitTables.cs" t="Include" />
         <e p="20201119165336_InitTables.Designer.cs" t="Include" />

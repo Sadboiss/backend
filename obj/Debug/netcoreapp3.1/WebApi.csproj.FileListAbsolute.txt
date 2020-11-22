@@ -230,3 +230,4 @@ D:\sadbois_backend\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
 D:\sadbois_backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\sadbois_backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\sadbois_backend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\sadbois_backend\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
