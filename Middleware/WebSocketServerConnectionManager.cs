@@ -4,7 +4,12 @@ using System.Net.WebSockets;
 
 namespace WebApi.Middleware
 {
-    public class WebSocketServerConnectionManager
+    public interface IWebSocketServerConnectionManager
+    {
+        ConcurrentDictionary<string, WebSocket> GetAllSockets();
+        string AddSocket(WebSocket socket);
+    }
+    public class WebSocketServerConnectionManager : IWebSocketServerConnectionManager
     {
         private ConcurrentDictionary<string, WebSocket> _sockets = new ConcurrentDictionary<string, WebSocket>();
 

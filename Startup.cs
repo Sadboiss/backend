@@ -35,14 +35,11 @@ namespace WebApi
             string conn = config.Replace("ENVID", Configuration["DB_UserId"])
                                 .Replace("ENVPW", Configuration["DB_PW"])
                                 .ToString();
-            // in memory database used for simplicity, change to a real db for production applications
             services.AddDbContext<SadboisContext>(options => {
                 options.UseMySql(conn/*Configuration.GetConnectionString("MyConnection")*/);
             });
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddCors();
-            
-            /*services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);*/
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
@@ -84,20 +81,14 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SadboisContext context)
         {
-            // add hardcoded test user to db on startup
-            // plain text password is used for simplicity, hashed passwords should be used in production applications
-            //context.Addresses.Add(new Address {CivicNumber = "1856", StreetName = "rue de tripoli", ZipCode = "H7M 4M5"});
-            //context.Users.Add(new User { FirstName = "Test", LastName = "User", Email = "test", Password = "test", Phone = "514-966-8481", AddressId = 1});
-            //context.SaveChanges();
-
             app.UseRouting();
-            app.UseWebSockets();
-            app.UseWebSocketServer();
-            app.Run(async contxt =>
+            //app.UseWebSockets();
+            //app.UseWebSocketServer();
+            /*app.Run(async contxt =>
             {
                 Console.WriteLine("Hello from the 3rd request delegate");
                 await contxt.Response.WriteAsync("Hello from the 3rd request delegate");
-            });
+            });*/
 
             // global cors policy
             app.UseCors(x => x

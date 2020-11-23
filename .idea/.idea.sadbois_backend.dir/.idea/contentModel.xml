@@ -28,11 +28,13 @@
       <e p="Entities" t="Include">
         <e p="Address.cs" t="Include" />
         <e p="CartItem.cs" t="Include" />
+        <e p="Category.cs" t="Include" />
         <e p="Entity.cs" t="Include" />
         <e p="Order.cs" t="Include" />
         <e p="Product.cs" t="Include" />
         <e p="RefreshToken.cs" t="Include" />
         <e p="ShoppingCart.cs" t="Include" />
+        <e p="Size.cs" t="Include" />
         <e p="Transaction.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>

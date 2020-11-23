@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using WebApi.Controllers.DTOs;
 using WebApi.Entities;
+using WebApi.Middleware;
 using WebApi.Services;
 using WebApi.Models;
 

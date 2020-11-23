@@ -20,5 +20,6 @@ namespace WebApi.Entities
         [ForeignKey("AddressId")]
         public virtual Address Address { get; set; }
         public int AddressId { get; set; }
+        
     }
 }
