@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace WebApi.Entities
 {
@@ -10,6 +11,7 @@ namespace WebApi.Entities
         public double Price { get; set; }
         public byte[] Image { get; set; }
         
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual List<ProductSize> ProductSizes { get; set; }
     }
 }

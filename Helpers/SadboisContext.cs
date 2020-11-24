@@ -10,6 +10,9 @@ namespace WebApi.Helpers
         public DbSet<Product> Products { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<ProductSize> ProductSizes { get; set; }
+        public DbSet<Size> Sizes { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
@@ -28,7 +31,8 @@ namespace WebApi.Helpers
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Address)
                 .WithMany()
-                .HasForeignKey(u => u.AddressId);
+                .HasForeignKey(u => u.AddressId)
+                .IsRequired();
 
             modelBuilder.Entity<ShoppingCart>()
                 .HasMany(i => i.CartItems)
@@ -45,6 +49,24 @@ namespace WebApi.Helpers
             modelBuilder.Entity<CartItem>()
                 .HasOne(ci => ci.Product)
                 .WithMany()
+                .IsRequired();
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany()
+                .HasForeignKey(p => p.CategoryId)
+                .IsRequired();
+
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.ProductSizes)
+                .WithOne(ps => ps.Product)
+                .HasForeignKey(ps => ps.ProductId)
+                .IsRequired();
+
+            modelBuilder.Entity<ProductSize>()
+                .HasOne(ps => ps.Size)
+                .WithMany()
+                .HasForeignKey(ps => ps.SizeId)
                 .IsRequired();
         }
     }

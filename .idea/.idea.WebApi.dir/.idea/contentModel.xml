@@ -8,7 +8,16 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
-        <e p="CartController.cs" t="Include" />
+        <e p="DTOs" t="Include">
+          <e p="AddressDto.cs" t="Include" />
+          <e p="CartItemDto.cs" t="Include" />
+          <e p="ProductDto.cs" t="Include" />
+          <e p="RefreshTokenDto.cs" t="Include" />
+          <e p="ShoppingCartDto.cs" t="Include" />
+          <e p="UserDto.cs" t="Include" />
+        </e>
+        <e p="ProductsController.cs" t="Include" />
+        <e p="ShoppingCartsController.cs" t="Include" />
         <e p="UsersController.cs" t="Include" />
       </e>
       <e p="docker-compose.debug.yml" t="Include" />
@@ -16,12 +25,15 @@
       <e p="Dockerfile" t="Include" />
       <e p="Entities" t="Include">
         <e p="Address.cs" t="Include" />
-        <e p="Cart.cs" t="Include" />
         <e p="CartItem.cs" t="Include" />
+        <e p="Category.cs" t="Include" />
         <e p="Entity.cs" t="Include" />
-        <e p="Item.cs" t="Include" />
         <e p="Order.cs" t="Include" />
+        <e p="Product.cs" t="Include" />
+        <e p="ProductSize.cs" t="Include" />
         <e p="RefreshToken.cs" t="Include" />
+        <e p="ShoppingCart.cs" t="Include" />
+        <e p="Size.cs" t="Include" />
         <e p="Transaction.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
@@ -30,9 +42,19 @@
         <e p="SadboisContext.cs" t="Include" />
       </e>
       <e p="LICENSE" t="Include" />
+      <e p="MappingProfiles" t="Include">
+        <e p="MappingProfile.cs" t="Include" />
+      </e>
+      <e p="Middleware" t="Include">
+        <e p="WebSocketServerConnectionManager.cs" t="Include" />
+        <e p="WebSocketServerMiddleware.cs" t="Include" />
+        <e p="WebSocketServerMiddlewareExtensions.cs" t="Include" />
+      </e>
       <e p="Migrations" t="Include">
-        <e p="20201005085013_init_tables.cs" t="Include" />
-        <e p="20201005085013_init_tables.Designer.cs" t="Include" />
+        <e p="20201119165336_InitTables.cs" t="Include" />
+        <e p="20201119165336_InitTables.Designer.cs" t="Include" />
+        <e p="20201123224934_CategoryAndSizeTables.cs" t="Include" />
+        <e p="20201123224934_CategoryAndSizeTables.Designer.cs" t="Include" />
         <e p="SadboisContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
@@ -55,7 +77,7 @@
       <e p="Program.cs" t="Include" />
       <e p="README.md" t="Include" />
       <e p="Services" t="Include">
-        <e p="CartService.cs" t="Include" />
+        <e p="ShoppingCartService.cs" t="Include" />
         <e p="UserService.cs" t="Include" />
       </e>
       <e p="Startup.cs" t="Include" />
