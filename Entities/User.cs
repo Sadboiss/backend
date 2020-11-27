@@ -10,6 +10,7 @@ namespace WebApi.Entities
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string UserType { get; set; }
 
         [JsonIgnore]
         public string Password { get; set; }
@@ -20,6 +21,5 @@ namespace WebApi.Entities
         [ForeignKey("AddressId")]
         public virtual Address Address { get; set; }
         public int AddressId { get; set; }
-        
     }
 }

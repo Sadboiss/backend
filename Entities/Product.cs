@@ -10,7 +10,7 @@ namespace WebApi.Entities
         public string Description { get; set; }
         public double Price { get; set; }
         public byte[] Image { get; set; }
-        
+        public bool Display { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<ProductSize> ProductSizes { get; set; }
     }

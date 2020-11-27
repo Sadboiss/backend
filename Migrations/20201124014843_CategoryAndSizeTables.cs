@@ -95,31 +95,31 @@ namespace WebApi.Migrations
                 principalTable: "Categories",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.InsertData(
-                table: "Categories",
-                columns: new [] { "Name", "Description" },
-                values: new object[] {"Hat", "Category representing hats"});
             
             migrationBuilder.InsertData(
                 table: "Categories",
-                columns: new [] { "Name", "Description" },
-                values: new object[] {"Topwear", "Category representing shirt, hoodies and long sleeves"});
+                columns: new [] { "Name", "Description", "DateCreated", "IsDeleted" },
+                values: new object[] {"Hat", "Category representing hats", DateTime.Now, false});
+            
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new [] { "Name", "Description", "DateCreated", "IsDeleted" },
+                values: new object[] {"Topwear", "Category representing shirt, hoodies and long sleeves", DateTime.Now, false});
 
             migrationBuilder.InsertData(
                 table: "Sizes",
-                columns: new [] { "Name" },
-                values: new object[] {"Small"});
+                columns: new [] { "Name", "DateCreated", "IsDeleted" },
+                values: new object[] {"Small", DateTime.Now, false});
             
             migrationBuilder.InsertData(
                 table: "Sizes",
-                columns: new [] { "Name" },
-                values: new object[] {"Medium"});
+                columns: new [] { "Name", "DateCreated", "IsDeleted" },
+                values: new object[] {"Medium", DateTime.Now, false});
             
             migrationBuilder.InsertData(
                 table: "Sizes",
-                columns: new [] { "Name" },
-                values: new object[] {"Large"});
+                columns: new [] { "Name", "DateCreated", "IsDeleted" },
+                values: new object[] {"Large", DateTime.Now, false});
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

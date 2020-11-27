@@ -14,7 +14,7 @@ namespace WebApi.MappingProfiles
             CreateMap<Product, ProductDto>();
             CreateMap<CartItem, CartItemDto>();
             CreateMap<ShoppingCart, ShoppingCartDto>();
-
+            CreateMap<Category, CategoryDto>();
         }
     }
 }

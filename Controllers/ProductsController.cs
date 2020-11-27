@@ -1,7 +1,10 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Controllers.DTOs;
 using WebApi.Entities;
 using WebApi.Helpers;
@@ -27,6 +30,7 @@ namespace WebApi.Controllers
         public IActionResult GetAll()
         {
             return Ok(_context.Products
+                .Include(product => product.Category)
                 .ToList()
                 .Select(product => _mapper.Map<Product, ProductDto>(product))
                 .ToList()
@@ -45,29 +49,60 @@ namespace WebApi.Controllers
         }
         
         [AllowAnonymous]
-        [HttpPost("add")]
-        public IActionResult Add([FromBody] ProductDto model)
+        [HttpPost("add-or-update")]
+        public async Task<IActionResult> Add([FromForm] ProductDto model)
         {
             if (model == null) return null;
-            var product = new Product
+            var productExists = _context.Products.FirstOrDefault(x => x.Id == model.Id);
+            
+            if (model.File != null && model.File.Length > 0)
             {
-                Name = model.Name,
-                Price = model.Price,
-                Description = model.Description,
-                Image = model.Image
-            };
-            _context.Products.Add(product);
-            return Ok(_context.SaveChanges() > 0);
+                using (var stream = new MemoryStream())
+                {
+                    await model.File.CopyToAsync(stream);
+                    model.Image = stream.ToArray();
+                }
+            }
+
+            if (productExists == null)
+            {
+                var product = new Product
+                {
+                    Name = model.Name,
+                    Price = model.Price,
+                    Description = model.Description,
+                    Image = model.Image,
+                    CategoryId = model.CategoryId
+                };
+                _context.Products.Add(product);
+            }
+            else
+            { 
+                _context.Entry(productExists).CurrentValues.SetValues(model);
+            }
+            return Ok(await _context.SaveChangesAsync() > 0);
         }
         
         [AllowAnonymous]
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var product = _context.Products.FirstOrDefault(x => x.Id == id);
             if (product == null) 
                 return NotFound(new {message = "Cannot find the product you are trying to delete"});
             _context.Products.Remove(product);
+            return Ok(await _context.SaveChangesAsync() > 0);
+
+        }
+        
+        [AllowAnonymous]
+        [HttpPut("update-display")]
+        public IActionResult Update([FromBody] ProductDto product)
+        {
+            var existingProduct = _context.Products.FirstOrDefault(x => x.Id == product.Id);
+            if (existingProduct == null) 
+                return NotFound(new {message = "Cannot find the product you are trying to update"});
+            _context.Entry(existingProduct).CurrentValues.SetValues(product);
             return Ok(_context.SaveChanges() > 0);
 
         }

@@ -18,6 +18,7 @@ namespace WebApi.Controllers.DTOs
         public string Phone { get; set; }
         [Required]
         public string Password { get; set; }
+        public string UserType { get; set; }
         [Required]
         public List<RefreshToken> RefreshTokens { get; set; }
         [Required]

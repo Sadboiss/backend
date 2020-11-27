@@ -51,7 +51,7 @@ namespace WebApi.Services
             user.RefreshTokens.Add(refreshToken);
             _context.Update(user);
             _context.SaveChanges();
-
+            
             return new AuthenticateResponse(user, jwtToken, refreshToken.Token);
         }
         

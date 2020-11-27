@@ -4,6 +4,7 @@ using WebApi.Services;
 using WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using System;
+using AutoMapper;
 
 namespace WebApi.Controllers
 {
@@ -13,6 +14,7 @@ namespace WebApi.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
         public UsersController(IUserService userService)
         {

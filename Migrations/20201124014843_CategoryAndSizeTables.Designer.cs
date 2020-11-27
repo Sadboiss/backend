@@ -9,7 +9,7 @@ using WebApi.Helpers;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(SadboisContext))]
-    [Migration("20201123224934_CategoryAndSizeTables")]
+    [Migration("20201124014843_CategoryAndSizeTables")]
     partial class CategoryAndSizeTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
