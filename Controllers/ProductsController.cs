@@ -1,9 +1,11 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Controllers.DTOs;
 using WebApi.Entities;
@@ -27,13 +29,13 @@ namespace WebApi.Controllers
         
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_context.Products
+            Console.WriteLine("GetAll");
+            return Ok(await _context.Products
                 .Include(product => product.Category)
-                .ToList()
                 .Select(product => _mapper.Map<Product, ProductDto>(product))
-                .ToList()
+                .ToListAsync()
             );
         }
         
@@ -49,8 +51,8 @@ namespace WebApi.Controllers
         }
         
         [AllowAnonymous]
-        [HttpPost("add-or-update")]
-        public async Task<IActionResult> Add([FromForm] ProductDto model)
+        [HttpPost]
+        public async Task<IActionResult> Update([FromForm] ProductDto model)
         {
             if (model == null) return null;
             var productExists = _context.Products.FirstOrDefault(x => x.Id == model.Id);
@@ -94,17 +96,16 @@ namespace WebApi.Controllers
             return Ok(await _context.SaveChangesAsync() > 0);
 
         }
-        
-        [AllowAnonymous]
-        [HttpPut("update-display")]
-        public IActionResult Update([FromBody] ProductDto product)
-        {
-            var existingProduct = _context.Products.FirstOrDefault(x => x.Id == product.Id);
-            if (existingProduct == null) 
-                return NotFound(new {message = "Cannot find the product you are trying to update"});
-            _context.Entry(existingProduct).CurrentValues.SetValues(product);
-            return Ok(_context.SaveChanges() > 0);
 
+        [AllowAnonymous]
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] ProductDto product)
+        {
+            var existingProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id == product.Id);
+            if (existingProduct == null)
+                return BadRequest(new { message = "The product you are trying to update does not exist." });
+            _context.Entry(existingProduct).CurrentValues.SetValues(product);  
+            return Ok(await _context.SaveChangesAsync() > 0);
         }
     }
 }

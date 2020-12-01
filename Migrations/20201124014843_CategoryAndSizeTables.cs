@@ -109,17 +109,27 @@ namespace WebApi.Migrations
             migrationBuilder.InsertData(
                 table: "Sizes",
                 columns: new [] { "Name", "DateCreated", "IsDeleted" },
-                values: new object[] {"Small", DateTime.Now, false});
+                values: new object[] {"XS", DateTime.Now, false});
             
             migrationBuilder.InsertData(
                 table: "Sizes",
                 columns: new [] { "Name", "DateCreated", "IsDeleted" },
-                values: new object[] {"Medium", DateTime.Now, false});
+                values: new object[] {"S", DateTime.Now, false});
             
             migrationBuilder.InsertData(
                 table: "Sizes",
                 columns: new [] { "Name", "DateCreated", "IsDeleted" },
-                values: new object[] {"Large", DateTime.Now, false});
+                values: new object[] {"M", DateTime.Now, false});
+            
+            migrationBuilder.InsertData(
+                table: "Sizes",
+                columns: new [] { "Name", "DateCreated", "IsDeleted" },
+                values: new object[] {"L", DateTime.Now, false});
+            
+            migrationBuilder.InsertData(
+                table: "Sizes",
+                columns: new [] { "Name", "DateCreated", "IsDeleted" },
+                values: new object[] {"XL", DateTime.Now, false});
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

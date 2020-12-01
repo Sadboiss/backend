@@ -63,6 +63,8 @@
         <e p="20201124020232_AddedUserTypeFieldInUserTable.Designer.cs" t="Include" />
         <e p="20201125132306_DisplayProduct.cs" t="Include" />
         <e p="20201125132306_DisplayProduct.Designer.cs" t="Include" />
+        <e p="20201129144310_AddInStockProductSize.cs" t="Include" />
+        <e p="20201129144310_AddInStockProductSize.Designer.cs" t="Include" />
         <e p="SadboisContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">

@@ -27,6 +27,7 @@ namespace WebApi.Services
 
         public IEnumerable<ShoppingCart> GetCart(int id)
         {
+            Console.WriteLine("GetCart");
             return _context.ShoppingCarts
                 .Where(s => s.Id == id)
                 .Include(s => s.CartItems)
