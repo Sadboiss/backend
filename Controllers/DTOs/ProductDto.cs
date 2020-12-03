@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Http;
 using WebApi.Entities;
 
@@ -15,7 +16,7 @@ namespace WebApi.Controllers.DTOs
         public bool Display { get; set; }
         [NotMapped]
         public IFormFile File { get; set; }
-        
         public CategoryDto Category { get; set; }
+        public List<ProductSize> ProductSizes { get; set; }
     }
 }

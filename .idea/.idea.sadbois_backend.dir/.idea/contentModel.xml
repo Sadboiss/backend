@@ -16,12 +16,14 @@
           <e p="CartItemDto.cs" t="Include" />
           <e p="CategoryDTO.cs" t="Include" />
           <e p="ProductDto.cs" t="Include" />
+          <e p="ProductSizeDto.cs" t="Include" />
           <e p="RefreshTokenDto.cs" t="Include" />
           <e p="ShoppingCartDto.cs" t="Include" />
           <e p="UserDto.cs" t="Include" />
         </e>
         <e p="ProductsController.cs" t="Include" />
         <e p="ShoppingCartsController.cs" t="Include" />
+        <e p="SizesController.cs" t="Include" />
         <e p="UsersController.cs" t="Include" />
       </e>
       <e p="docker-compose.debug.yml" t="Include" />

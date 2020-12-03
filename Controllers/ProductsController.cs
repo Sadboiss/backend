@@ -18,7 +18,7 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class ProductsController : ControllerBase
     {
-        private SadboisContext _context;
+        private readonly SadboisContext _context;
         private readonly IMapper _mapper;
         
         public ProductsController(SadboisContext context, IMapper mapper)
@@ -52,7 +52,7 @@ namespace WebApi.Controllers
         
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Update([FromForm] ProductDto model)
+        public async Task<IActionResult> AddOrUpdate([FromForm] ProductDto model)
         {
             if (model == null) return null;
             var productExists = _context.Products.FirstOrDefault(x => x.Id == model.Id);
