@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace WebApi.Controllers
             Console.WriteLine("GetAll");
             return Ok(await _context.Products
                 .Include(product => product.Category)
+                .Include(product => product.ProductSizes)
                 .Select(product => _mapper.Map<Product, ProductDto>(product))
                 .ToListAsync()
             );
@@ -76,7 +78,16 @@ namespace WebApi.Controllers
                     Image = model.Image,
                     CategoryId = model.CategoryId
                 };
+                var productSizes = _context.Sizes.Select(size =>
+                    new ProductSize
+                    {
+                        Product = product,
+                        Size = size,
+                        InStock = 0
+                    })
+                    .ToList();
                 _context.Products.Add(product);
+                _context.ProductSizes.AddRange(productSizes);
             }
             else
             { 
