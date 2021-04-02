@@ -1,11 +1,12 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace WebApi.Controllers.DTOs
 {
     public class ProductSizeDto
     {
-        public int ProductId { get; set; }
-        public int SizeId { get; set; }
-        public int InStock { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid SizeId { get; set; }
+        public string InStock { get; set; }
     }
 }

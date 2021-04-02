@@ -6,12 +6,8 @@ using Microsoft.EntityFrameworkCore;
 namespace WebApi.Entities
 {
     [Owned]
-    public class RefreshToken
+    public class RefreshToken : Entity
     {
-        [Key]
-        [JsonIgnore]
-        public int Id { get; set; }
-        
         public string Token { get; set; }
         public DateTime Expires { get; set; }
         public bool IsExpired => DateTime.UtcNow >= Expires;

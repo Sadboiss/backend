@@ -7,7 +7,7 @@ namespace WebApi.Entities
 {
     public class ShoppingCart : Entity
     {
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public virtual List<CartItem> CartItems { get; set; }
         [ForeignKey("UserId")]
         public virtual User User { get; set; }

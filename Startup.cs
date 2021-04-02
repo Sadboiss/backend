@@ -14,7 +14,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 using WebApi.MappingProfiles;
+using Microsoft.OpenApi.Models;
 using WebApi.Middleware;
 
 namespace WebApi
@@ -37,6 +39,15 @@ namespace WebApi
                                 .ToString();
             services.AddDbContext<SadboisContext>(options => {
                 options.UseMySql(conn/*Configuration.GetConnectionString("MyConnection")*/);
+            });
+            services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+               c.SwaggerDoc("v1", new OpenApiInfo
+               {
+                   Title = "Sadbois API",
+                   Version = "v1"
+               }); 
             });
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddCors();
@@ -76,6 +87,7 @@ namespace WebApi
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IShoppingCartService, ShoppingCartService>();
+            services.AddScoped<IProductImagesService, ProductImagesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -101,6 +113,17 @@ namespace WebApi
             app.UseAuthorization();
 
             app.UseEndpoints(x => x.MapControllers());
+            
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Sadbois API");
+                });
+            //}
+
         }
 
         

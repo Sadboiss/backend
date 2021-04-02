@@ -1,3 +1,4 @@
+using System;
 using System.Text.Json.Serialization;
 using WebApi.Entities;
 
@@ -5,7 +6,7 @@ namespace WebApi.Models
 {
     public class AuthenticateResponse
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -17,7 +18,7 @@ namespace WebApi.Models
 
         public AuthenticateResponse(User user, string jwtToken, string refreshToken)
         {
-            Id = user.Id;
+            Id = user.Id.ToString();
             FirstName = user.FirstName;
             LastName = user.LastName;
             Email = user.Email;

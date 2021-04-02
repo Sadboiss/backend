@@ -13,6 +13,7 @@ namespace WebApi.Helpers
         public DbSet<ProductSize> ProductSizes { get; set; }
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
@@ -63,6 +64,12 @@ namespace WebApi.Helpers
                 .HasForeignKey(ps => ps.ProductId)
                 .IsRequired();
 
+            modelBuilder.Entity<Product>()
+                .HasMany(p => p.ProductImages)
+                .WithOne(pi => pi.Product)
+                .HasForeignKey(pi => pi.ProductId)
+                .IsRequired();
+            
             modelBuilder.Entity<ProductSize>()
                 .HasOne(ps => ps.Size)
                 .WithMany()

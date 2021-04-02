@@ -6,8 +6,8 @@ namespace WebApi.Entities
 {
     public class CartItem : Entity
     {
-        public int ProductId { get; set; }
-        public int ShoppingCartId { get; set; }
+        public Guid ProductId { get; set; }
+        public Guid ShoppingCartId { get; set; }
         public int Quantity { get; set; }
         
         [ForeignKey("ProductId")]

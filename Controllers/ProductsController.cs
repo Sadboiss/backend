@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.Controllers.DTOs;
 using WebApi.Entities;
 using WebApi.Helpers;
+using WebApi.Services;
 
 namespace WebApi.Controllers
 {
@@ -21,32 +22,33 @@ namespace WebApi.Controllers
     {
         private readonly SadboisContext _context;
         private readonly IMapper _mapper;
-        
-        public ProductsController(SadboisContext context, IMapper mapper)
+        private readonly IProductImagesService _service;
+        public ProductsController(SadboisContext context, IMapper mapper, IProductImagesService service)
         {
             _context = context;
             _mapper = mapper;
+            _service = service;
         }
         
         [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            Console.WriteLine("GetAll");
-            return Ok(await _context.Products
+            var x = await _context.Products
                 .Include(product => product.Category)
                 .Include(product => product.ProductSizes)
+                .Include(product => product.ProductImages)
                 .Select(product => _mapper.Map<Product, ProductDto>(product))
-                .ToListAsync()
-            );
+                .ToListAsync();
+            return Ok(x);
         }
         
         [AllowAnonymous]
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             return Ok(_context.Products
-                .Where(product => product.Id == id)
+                .Where(product => product.Id.ToString().Equals(id))
                 .Select(product => _mapper.Map<Product, ProductDto>(product))
                 .First()
             );
@@ -57,16 +59,7 @@ namespace WebApi.Controllers
         public async Task<IActionResult> AddOrUpdate([FromForm] ProductDto model)
         {
             if (model == null) return null;
-            var productExists = _context.Products.FirstOrDefault(x => x.Id == model.Id);
-            
-            if (model.File != null && model.File.Length > 0)
-            {
-                using (var stream = new MemoryStream())
-                {
-                    await model.File.CopyToAsync(stream);
-                    model.Image = stream.ToArray();
-                }
-            }
+            var productExists = _context.Products.FirstOrDefault(p => p.Id.Equals(model.Id));
 
             if (productExists == null)
             {
@@ -75,7 +68,6 @@ namespace WebApi.Controllers
                     Name = model.Name,
                     Price = model.Price,
                     Description = model.Description,
-                    Image = model.Image,
                     CategoryId = model.CategoryId
                 };
                 var productSizes = _context.Sizes.Select(size =>
@@ -88,6 +80,8 @@ namespace WebApi.Controllers
                     .ToList();
                 _context.Products.Add(product);
                 _context.ProductSizes.AddRange(productSizes);
+                
+                _service.CreateNewImage(model.FileList, product);
             }
             else
             { 
@@ -98,9 +92,9 @@ namespace WebApi.Controllers
         
         [AllowAnonymous]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
-            var product = _context.Products.FirstOrDefault(x => x.Id == id);
+            var product = _context.Products.FirstOrDefault(p => p.Id.ToString().Equals(id));
             if (product == null) 
                 return NotFound(new {message = "Cannot find the product you are trying to delete"});
             _context.Products.Remove(product);
@@ -112,7 +106,7 @@ namespace WebApi.Controllers
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] ProductDto product)
         {
-            var existingProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id == product.Id);
+            var existingProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id.Equals(product.Id));
             if (existingProduct == null)
                 return BadRequest(new { message = "The product you are trying to update does not exist." });
             _context.Entry(existingProduct).CurrentValues.SetValues(product);  

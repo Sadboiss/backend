@@ -5,7 +5,7 @@ namespace WebApi.Entities
 {
     public class Product : Entity
     {
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
@@ -13,5 +13,6 @@ namespace WebApi.Entities
         public bool Display { get; set; }
         public virtual Category Category { get; set; }
         public virtual List<ProductSize> ProductSizes { get; set; }
+        public virtual List<ProductImage> ProductImages { get; set; }
     }
 }

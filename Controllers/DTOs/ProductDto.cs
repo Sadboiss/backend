@@ -1,22 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebApi.Entities;
 
 namespace WebApi.Controllers.DTOs
 {
     public class ProductDto
     {
-        public int Id { get; set; }
-        public int CategoryId { get; set; }
+        public Guid Id { get; set; }
+        public Guid CategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
-        public byte[] Image { get; set; }
         public bool Display { get; set; }
-        [NotMapped]
-        public IFormFile File { get; set; }
+        [FromForm(Name = "FileList")]
+        [JsonIgnore]
+        public List<IFormFile> FileList { get; }  = new List<IFormFile>();
+        public List<ProductImageDto> ProductImages { get; set; }
         public CategoryDto Category { get; set; }
-        public List<ProductSize> ProductSizes { get; set; }
+        public List<ProductSizeDto> ProductSizes { get; set; }
     }
 }

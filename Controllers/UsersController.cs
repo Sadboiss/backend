@@ -14,7 +14,7 @@ namespace WebApi.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
-        private readonly IMapper _mapper;
+        //private readonly IMapper _mapper;
 
         public UsersController(IUserService userService)
         {

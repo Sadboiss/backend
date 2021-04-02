@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using WebApi.Entities;
 
@@ -7,7 +8,7 @@ namespace WebApi.Controllers.DTOs
     public class UserDto
     {
         [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

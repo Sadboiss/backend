@@ -1,3 +1,4 @@
+using System;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,9 +18,7 @@ namespace WebApi.Entities
 
         [JsonIgnore]
         public List<RefreshToken> RefreshTokens { get; set; }
-        
-        [ForeignKey("AddressId")]
         public virtual Address Address { get; set; }
-        public int AddressId { get; set; }
+        public Guid AddressId { get; set; }
     }
 }

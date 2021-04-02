@@ -19,9 +19,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Address", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("CivicNumber")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -45,9 +45,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.CartItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -55,14 +55,14 @@ namespace WebApi.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("char(36)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("ShoppingCartId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ShoppingCartId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -75,9 +75,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -98,9 +98,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -114,8 +114,8 @@ namespace WebApi.Migrations
                     b.Property<string>("OrderStatus")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("RequiredDate")
                         .HasColumnType("datetime(6)");
@@ -123,8 +123,8 @@ namespace WebApi.Migrations
                     b.Property<DateTime>("ShippedDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -137,12 +137,12 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -172,11 +172,36 @@ namespace WebApi.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("WebApi.Entities.ProductImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<byte[]>("ImageData")
+                        .HasColumnType("longblob");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImages");
+                });
+
             modelBuilder.Entity("WebApi.Entities.ProductSize", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -187,11 +212,11 @@ namespace WebApi.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("char(36)");
 
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("SizeId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -204,9 +229,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.ShoppingCart", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -214,8 +239,8 @@ namespace WebApi.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -226,9 +251,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Size", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -246,9 +271,9 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.Transaction", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -256,14 +281,14 @@ namespace WebApi.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("char(36)");
 
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("char(36)");
 
                     b.Property<bool>("Successful")
                         .HasColumnType("tinyint(1)");
@@ -279,12 +304,12 @@ namespace WebApi.Migrations
 
             modelBuilder.Entity("WebApi.Entities.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("char(36)");
 
-                    b.Property<int>("AddressId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("AddressId")
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime(6)");
@@ -356,6 +381,15 @@ namespace WebApi.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("WebApi.Entities.ProductImage", b =>
+                {
+                    b.HasOne("WebApi.Entities.Product", "Product")
+                        .WithMany("ProductImages")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("WebApi.Entities.ProductSize", b =>
                 {
                     b.HasOne("WebApi.Entities.Product", "Product")
@@ -405,9 +439,9 @@ namespace WebApi.Migrations
 
                     b.OwnsMany("WebApi.Entities.RefreshToken", "RefreshTokens", b1 =>
                         {
-                            b1.Property<int>("Id")
+                            b1.Property<Guid>("Id")
                                 .ValueGeneratedOnAdd()
-                                .HasColumnType("int");
+                                .HasColumnType("char(36)");
 
                             b1.Property<DateTime>("Created")
                                 .HasColumnType("datetime(6)");
@@ -415,8 +449,14 @@ namespace WebApi.Migrations
                             b1.Property<string>("CreatedByIp")
                                 .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                            b1.Property<DateTime>("DateCreated")
+                                .HasColumnType("datetime(6)");
+
                             b1.Property<DateTime>("Expires")
                                 .HasColumnType("datetime(6)");
+
+                            b1.Property<bool>("IsDeleted")
+                                .HasColumnType("tinyint(1)");
 
                             b1.Property<string>("ReplacedByToken")
                                 .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -430,8 +470,8 @@ namespace WebApi.Migrations
                             b1.Property<string>("Token")
                                 .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                            b1.Property<int>("UserId")
-                                .HasColumnType("int");
+                            b1.Property<Guid>("UserId")
+                                .HasColumnType("char(36)");
 
                             b1.HasKey("Id");
 
